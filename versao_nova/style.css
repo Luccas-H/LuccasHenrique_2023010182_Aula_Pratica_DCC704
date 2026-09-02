@@ -1,0 +1,297 @@
+
+:root {
+    --fundo: #FFFFFF;
+    --fundo-sutil: #F7F8FA;
+    --texto: #1A1D21;
+    --texto-sec: #5B6270;
+    --borda: #E4E6EA;
+    --acento: #2B5FD9;
+    --acento-hover: #234ACB;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+/* ---------- Cabeçalho do site ---------- */
+
+.topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--borda);
+}
+
+.nome-site {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.links-menu {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.link-item {
+    background: none;
+    border: none;
+    padding: 0.25rem 0;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--texto-sec);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.link-item:hover {
+    color: var(--texto);
+}
+
+.link-item:focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 3px;
+}
+
+/* ---------- Corpo / conteúdo ---------- */
+
+.corpo-pagina {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.conteudo-principal {
+    width: 100%;
+    max-width: 640px;
+}
+
+.post-perfil > header {
+    margin-bottom: 2rem;
+}
+
+.titulo-post {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+}
+
+.subtitulo-autor {
+    margin: 0;
+    color: var(--texto-sec);
+    font-size: 0.9rem;
+}
+
+/* ---------- Foto de perfil ---------- */
+
+.bloco-foto {
+    margin: 0 0 2rem;
+}
+
+.foto-perfil {
+    display: block;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+}
+
+/* ---------- Seções de texto ---------- */
+
+.secao-texto {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--borda);
+}
+
+.secao-texto:last-of-type {
+    border-bottom: none;
+}
+
+.titulo-secao {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.texto {
+    margin: 0;
+    color: var(--texto);
+    max-width: 68ch;
+}
+
+/* ---------- Tags de tecnologia ---------- */
+
+.lista-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+.tag {
+    padding: 0.3rem 0.7rem;
+    background: var(--fundo-sutil);
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--texto-sec);
+}
+
+/* ---------- Botão interativo ---------- */
+
+.links-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.links-sociais a {
+    text-decoration: none;
+}
+
+.botao-interativo {
+    display: inline-block;
+    margin: 0;
+    padding: 0.65rem 1.25rem;
+    background: var(--acento);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.botao-interativo:hover {
+    background: var(--acento-hover);
+}
+
+.botao-interativo:focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 3px;
+}
+
+#mensagem-secreta {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--fundo-sutil);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    color: var(--texto);
+    font-size: 0.95rem;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 480px) {
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo-post {
+        font-size: 1.6rem;
+    }
+}
+
+.descricao-item {
+    margin: 0.4rem 0 0;
+    color: var(--texto-sec);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+/* ---------- Badges (GitHub / LinkedIn / UFRR) ---------- */
+
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+}
+
+.links-sociais img {
+    display: block;
+    height: 28px;
+    width: auto;
+    transition: transform 0.15s ease;
+}
+
+.links-sociais a:focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+/* ---------- Botões redondos (GitHub / LinkedIn) ---------- */
+
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.botao-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.botao-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.botao-social:focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 3px;
+}
+
+.icone-social {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.botao-github {
+    background: #181717;
+}
+
+.botao-linkedin {
+    background: #0A66C2;
+}
